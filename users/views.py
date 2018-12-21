@@ -15,7 +15,7 @@ def login(request):
     user = authenticate(**res)
     if user is None:
         return HttpResponse('用户名或密码错误')
-    user_login(request,user)
+        user_login(request,user)
     url_source = request.META['HTTP_REFERER']
 
     return redirect(url_source)
